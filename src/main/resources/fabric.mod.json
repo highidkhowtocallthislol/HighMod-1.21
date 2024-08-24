@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "highmod",
+	"version": "${version}",
+	"name": "HighMod",
+	"description": "HighMod is a mod with biomes, custom tools, items and more.",
+	"authors": [
+		"High"
+	],
+
+	"license": "MIT",
+	"icon": "favicon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.highskyguy.highmod.HighMod"
+		],
+		"fabric-datagen": [
+			"net.highskyguy.highmod.HighModDataGenerator"
+		],
+		"client": [
+			"net.highskyguy.highmod.HighModClient"
+		],
+		"modmenu": [
+			"net.highskyguy.highmod.ModMenuConsumer"
+		]
+	},
+	"mixins": [
+		"highmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
