@@ -2,6 +2,8 @@ package net.highskyguy.highmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.highskyguy.highmod.block.ModBlocks;
+import net.highskyguy.highmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +15,7 @@ public class HighMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
